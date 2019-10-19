@@ -1,0 +1,9 @@
+Sub test()
+
+Set MyRequest = CreateObject("WinHttp.WinHttpRequest.5.1")
+MyRequest.Open "get", "https://issues.apache.org/jira/rest/api/latest/issue/SPARK-29103.json"
+MyRequest.Send
+MsgBox MyRequest.responseText
+
+
+End Sub
